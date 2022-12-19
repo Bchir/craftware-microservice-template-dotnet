@@ -18,8 +18,8 @@ runs:
     - name: Read coverage file
       id: coverage
       shell: bash
-      run: echo "::set-output name=SummaryGithub::$(cat coveragereport/SummaryGithub.md)"
-    
+      run: echo "SummaryGithub=$(cat coveragereport/SummaryGithub.md)" >> $GITHUB_OUTPUT
+ 
     - name: Comment PR
       uses: thollander/actions-comment-pull-request@v2
       with:
