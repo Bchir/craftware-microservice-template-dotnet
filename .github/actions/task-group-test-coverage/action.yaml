@@ -9,9 +9,7 @@ runs:
 
     - name: Run unit Test
       shell: bash
-      run: |
-        dotnet test --no-restore --no-build --configuration Release --verbosity normal --logger trx \
-        --collect:"XPlat Code Coverage" --logger trx
+      run: dotnet test --no-restore --no-build --configuration Release --verbosity detailed --logger trx --collect:"XPlat Code Coverage"
 
     - name: Merge coverages
       shell: bash
