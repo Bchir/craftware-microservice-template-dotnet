@@ -11,6 +11,9 @@ jobs:
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
         NUGET_XMLDOC_MODE: skip
     steps:
+        - name: Checkout
+          uses: actions/checkout@latest
+
         - name: build
           uses: ./.github/actions/task-group-build
         
