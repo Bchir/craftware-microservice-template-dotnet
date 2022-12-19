@@ -9,8 +9,8 @@ runs:
 
     - name: Run unit Test
       shell: bash
-      run: dotnet test --no-restore --no-build --configuration Release --verbosity detailed --logger trx --collect:"XPlat Code Coverage"
+      run: dotnet test --no-restore --no-build --configuration Release --verbosity normal --logger trx --collect:"XPlat Code Coverage"
 
     - name: Merge coverages
       shell: bash
-      run: dotnet-coverage merge --remove-input-files -r *.coverage -o ./coverage.cobertura.xml -f cobertura
+      run: dotnet-coverage merge --remove-input-files -r coverage.cobertura.xml -o ./coverage.cobertura.xml -f cobertura
