@@ -13,4 +13,4 @@ runs:
 
     - name: publish run summary
       shell: bash
-      run: cat FILE >$GITHUB_STEP_SUMMARY
+      run: cat coveragereport/SummaryGithub.md >$GITHUB_STEP_SUMMARY
