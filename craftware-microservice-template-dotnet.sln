@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		LICENSE = LICENSE
 		README.md = README.md
-		.github\task-group-build.yaml = .github\task-group-build.yaml
-		.github\task-group-unit-test.yaml = .github\task-group-unit-test.yaml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftware.ErrorHandling", "Craftware.ErrorHandling\Craftware.ErrorHandling.csproj", "{26772FE1-6DFD-477F-86E9-BCC608941297}"
@@ -21,10 +19,22 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftware.ApiVersioning", "Craftware.ApiVersioning\Craftware.ApiVersioning.csproj", "{96D41E90-4D3B-41B2-A1D3-FA775476663A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{916AEB90-8FD2-42FA-AB54-43108A87E2CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{8E24BAB4-721A-40F0-B616-02CB99F3ACED}"
 	ProjectSection(SolutionItems) = preProject
-		.github\task-group-build.yaml = .github\task-group-build.yaml
-		.github\task-group-unit-test.yaml = .github\task-group-unit-test.yaml
+		.github\workflows\workflow-branch-build.yml = .github\workflows\workflow-branch-build.yml
+		.github\workflows\workflow-pr-build.yml = .github\workflows\workflow-pr-build.yml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{17633FF2-AAB6-422B-9280-E35DE20863A5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\actions\task-group-build.yml = .github\actions\task-group-build.yml
+		.github\actions\task-group-publish-coverage-comments.yml = .github\actions\task-group-publish-coverage-comments.yml
+		.github\actions\task-group-publish-coverage-report.yml = .github\actions\task-group-publish-coverage-report.yml
+		.github\actions\task-group-test-coverage.yml = .github\actions\task-group-test-coverage.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craftware.ErrorHandling.Tests", "Craftware.ErrorHandling.Tests\Craftware.ErrorHandling.Tests.csproj", "{2D3728CE-FE62-4799-AA2A-6C7A386177D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,12 +54,18 @@ Global
 		{96D41E90-4D3B-41B2-A1D3-FA775476663A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D41E90-4D3B-41B2-A1D3-FA775476663A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D41E90-4D3B-41B2-A1D3-FA775476663A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3728CE-FE62-4799-AA2A-6C7A386177D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3728CE-FE62-4799-AA2A-6C7A386177D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3728CE-FE62-4799-AA2A-6C7A386177D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3728CE-FE62-4799-AA2A-6C7A386177D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{916AEB90-8FD2-42FA-AB54-43108A87E2CD} = {747B146A-CFF8-444B-ABF5-4EFAA3C681D1}
+		{8E24BAB4-721A-40F0-B616-02CB99F3ACED} = {916AEB90-8FD2-42FA-AB54-43108A87E2CD}
+		{17633FF2-AAB6-422B-9280-E35DE20863A5} = {916AEB90-8FD2-42FA-AB54-43108A87E2CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9216153E-733E-4097-BDF9-55303040B8F4}
