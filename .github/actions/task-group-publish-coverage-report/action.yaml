@@ -18,6 +18,6 @@ runs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages
       with:
-        github_token: inputs.token 
+        github_token: ${{ inputs.token }}
         publish_dir: ./coveragereport
         keep_files: true
