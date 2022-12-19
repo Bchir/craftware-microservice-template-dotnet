@@ -12,10 +12,10 @@ jobs:
         NUGET_XMLDOC_MODE: skip
     steps:
         - name: build
-          uses: ./.github/actions/task-group-build.yml
+          uses: ./.github/actions/task-group-build
         
         - name: test
-          uses: ./.github/actions/task-group-test-coverage.yml
+          uses: ./.github/actions/task-group-test-coverage
         
         - name: publish result
-          uses: ./.github/actions/task-group-publish-coverage-comments.yml    
+          uses: ./.github/actions/task-group-publish-coverage-comments

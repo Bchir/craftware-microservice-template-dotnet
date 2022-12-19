@@ -1,5 +1,5 @@
 name: publish coverage summary
-
+description: publish coverage summary 
 runs:
   using: composite
   steps:
@@ -12,4 +12,5 @@ runs:
         tag: "${{ github.run_number }}_${{ github.run_id }}"
 
     - name: publish run summary
+      shell: bash
       run: cat FILE >$GITHUB_STEP_SUMMARY
