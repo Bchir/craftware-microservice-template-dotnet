@@ -26,4 +26,4 @@ jobs:
         - name: publish result
           uses: ./.github/actions/task-group-publish-coverage-report
           with:
-            token: ${{ github.token }}
+            token: ${{ secrets.GITHUB_TOKEN }}
