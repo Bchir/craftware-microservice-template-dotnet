@@ -14,3 +14,8 @@ runs:
     - name: publish run summary
       shell: bash
       run: cat coveragereport/SummaryGithub.md >$GITHUB_STEP_SUMMARY
+    
+    - name: Comment PR
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        message: $GITHUB_STEP_SUMMARY
