@@ -15,12 +15,13 @@ runs:
       shell: bash
       run: cat coveragereport/SummaryGithub.md >$GITHUB_STEP_SUMMARY
     
-    - name: Read coverage file
+    - name: Read file contents
       id: coverage
-      shell: bash
-      run: echo "SummaryGithub=$(cat coveragereport/SummaryGithub.md)" >> $GITHUB_OUTPUT
- 
+      uses: andstor/file-reader-action@v1
+      with:
+        path: "coveragereport/SummaryGithub.md"
+    
     - name: Comment PR
       uses: thollander/actions-comment-pull-request@v2
       with:
-        message: ${{steps.coverage.outputs.SummaryGithub}}
+        message: ${{steps.coverage.outputs.contents }}
