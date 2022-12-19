@@ -4,6 +4,8 @@ on:
  push:
     branches:
       - main
+permissions:
+  pages: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,3 +25,5 @@ jobs:
         
         - name: publish result
           uses: ./.github/actions/task-group-publish-coverage-report
+          with:
+            token: ${{ github.token }}
