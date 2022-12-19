@@ -4,8 +4,6 @@ on:
  push:
     branches:
       - main
-permissions:
-  pages: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,6 +11,9 @@ jobs:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
         NUGET_XMLDOC_MODE: skip
+    permissions:
+      contents: write
+      pages: write
     steps:
         - name: Checkout
           uses: actions/checkout@v3
