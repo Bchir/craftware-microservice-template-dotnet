@@ -4,7 +4,7 @@ runs:
   using: composite
   steps:
     - name: ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@latest
+      uses: danielpalme/ReportGenerator-GitHub-Action
       with:
         reports: coverage.cobertura.xml
         targetdir: coveragereport
@@ -12,7 +12,7 @@ runs:
         tag: "${{ github.run_number }}_${{ github.run_id }}"
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@latest
+      uses: peaceiris/actions-gh-pages
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./coveragereport
