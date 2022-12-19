@@ -1,0 +1,15 @@
+name: publish coverage summary
+
+runs:
+  using: composite
+  steps:
+    - name: ReportGenerator
+      uses: danielpalme/ReportGenerator-GitHub-Action@latest
+      with:
+        reports: coverage.cobertura.xml
+        targetdir: coveragereport
+        reporttypes: MarkdownSummaryGithub
+        tag: "${{ github.run_number }}_${{ github.run_id }}"
+
+    - name: publish run summary
+      run: cat FILE >$GITHUB_STEP_SUMMARY

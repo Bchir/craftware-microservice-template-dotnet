@@ -1,0 +1,27 @@
+name: publish coverage pages
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+runs:
+  using: composite
+  steps:
+    - name: ReportGenerator
+      uses: danielpalme/ReportGenerator-GitHub-Action@latest
+      with:
+        reports: coverage.cobertura.xml
+        targetdir: coveragereport
+        historydir: coveragereport/history
+        tag: "${{ github.run_number }}_${{ github.run_id }}"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@latest
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./coveragereport
+        keep_files: true

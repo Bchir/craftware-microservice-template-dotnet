@@ -1,0 +1,26 @@
+name: build project
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@latest
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.x
+
+    - name: Restore packages from cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+
+    - name: Restore packages
+      run: dotnet restore --locked-mode
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
