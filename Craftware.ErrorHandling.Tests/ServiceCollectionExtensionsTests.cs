@@ -15,4 +15,16 @@ public class ServiceCollectionExtensionsTests
         specificHandler.Should().NotBeNull();
         handler.Should().BeOfType<DummyExceptionHandler>();
     }
+
+    [Fact]
+    public void ShouldBeAbleToExtendProblemDetails()
+    {
+        var services = new ServiceCollection();
+        services.AddProblemDetailsExtensions();
+        var sp = services.BuildServiceProvider();
+
+        var handler = sp.GetService<ProblemDetailsFactory>();
+
+        handler.Should().NotBeNull();
+    }
 }
