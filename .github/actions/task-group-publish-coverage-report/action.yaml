@@ -9,9 +9,9 @@ runs:
   steps:
     - name: Checkout
       uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-          path: 'coveragereport'
+      with:
+        ref: gh-pages
+        path: 'coveragereport'
     - name: ReportGenerator
       uses: danielpalme/ReportGenerator-GitHub-Action@5.1.13
       with:
