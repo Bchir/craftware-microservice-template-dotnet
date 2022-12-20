@@ -22,7 +22,6 @@ jobs:
     - name: NuGet update
       uses: Bchir/update-nuget@V1.0.1-RC3
       with:
-        searchFor: 'outdated'
         versionToSelect: 'latest'
 
     - name: Create Pull Request
