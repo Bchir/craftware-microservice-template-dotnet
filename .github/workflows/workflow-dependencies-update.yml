@@ -3,6 +3,7 @@ name: auto update NuGet
 on:
   schedule:
     - cron: "0 1 * * 1"
+  workflow_dispatch:
 jobs:
  build:
     runs-on: ubuntu-latest
