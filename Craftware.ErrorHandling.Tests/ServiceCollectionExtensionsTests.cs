@@ -26,7 +26,5 @@ public class ServiceCollectionExtensionsTests
         var sp = services.BuildServiceProvider();
 
         var handler = sp.GetService<ProblemDetailsFactory>();
-
-        handler.Should().NotBeNull();
     }
 }
