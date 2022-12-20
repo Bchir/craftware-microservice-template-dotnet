@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+
 namespace Craftware.ErrorHandling.Tests;
 
 public class ServiceCollectionExtensionsTests
