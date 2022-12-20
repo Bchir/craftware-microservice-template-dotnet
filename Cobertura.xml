@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.041666666666666664" branch-rate="0" lines-covered="3" lines-valid="72" branches-covered="0" branches-valid="14" complexity="9" version="0" timestamp="1671524549">
+<coverage line-rate="0.08333333333333333" branch-rate="0" lines-covered="6" lines-valid="72" branches-covered="0" branches-valid="14" complexity="9" version="0" timestamp="1671526376">
   <sources>
     <source>/home/runner/work/craftware-microservice-template-dotnet/craftware-microservice-template-dotnet/Craftware.ErrorHandling/</source>
   </sources>
   <packages>
-    <package name="Craftware.ErrorHandling" line-rate="0.041666666666666664" branch-rate="0" complexity="9">
+    <package name="Craftware.ErrorHandling" line-rate="0.08333333333333333" branch-rate="0" complexity="9">
       <classes>
         <class name="Craftware.ErrorHandling.ErrorDetails" filename="/home/runner/work/craftware-microservice-template-dotnet/craftware-microservice-template-dotnet/Craftware.ErrorHandling/ErrorDetails.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -181,7 +181,7 @@
             <line number="52" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Craftware.ErrorHandling.ServiceCollectionExtensions" filename="/home/runner/work/craftware-microservice-template-dotnet/craftware-microservice-template-dotnet/Craftware.ErrorHandling/ServiceCollectionExtensions.cs" line-rate="0.2727272727272727" branch-rate="0" complexity="NaN">
+        <class name="Craftware.ErrorHandling.ServiceCollectionExtensions" filename="/home/runner/work/craftware-microservice-template-dotnet/craftware-microservice-template-dotnet/Craftware.ErrorHandling/ServiceCollectionExtensions.cs" line-rate="0.5454545454545454" branch-rate="0" complexity="NaN">
           <methods>
             <method name="AddExceptionHandler" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -190,16 +190,16 @@
                 <line number="14" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="AddProblemDetailsExtensions" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0" branch-rate="0" complexity="NaN">
+            <method name="AddProblemDetailsExtensions" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0.375" branch-rate="0" complexity="NaN">
               <lines>
-                <line number="19" hits="0" branch="false" />
-                <line number="20" hits="0" branch="false" />
+                <line number="19" hits="1" branch="false" />
+                <line number="20" hits="1" branch="false" />
                 <line number="21" hits="0" branch="false" />
                 <line number="22" hits="0" branch="false" />
                 <line number="23" hits="0" branch="true" condition-coverage="0% (0/4)" />
                 <line number="24" hits="0" branch="false" />
                 <line number="25" hits="0" branch="false" />
-                <line number="26" hits="0" branch="false" />
+                <line number="26" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
@@ -207,14 +207,14 @@
             <line number="12" hits="1" branch="false" />
             <line number="13" hits="1" branch="false" />
             <line number="14" hits="1" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="20" hits="0" branch="false" />
+            <line number="19" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
             <line number="21" hits="0" branch="false" />
             <line number="22" hits="0" branch="false" />
             <line number="23" hits="0" branch="true" condition-coverage="0% (0/4)" />
             <line number="24" hits="0" branch="false" />
             <line number="25" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
+            <line number="26" hits="1" branch="false" />
           </lines>
         </class>
       </classes>
