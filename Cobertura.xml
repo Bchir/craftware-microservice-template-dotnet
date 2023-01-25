@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.08333333333333333" branch-rate="0" lines-covered="6" lines-valid="72" branches-covered="0" branches-valid="14" complexity="9" version="0" timestamp="1672068153">
+<coverage line-rate="0.08333333333333333" branch-rate="0" lines-covered="6" lines-valid="72" branches-covered="0" branches-valid="14" complexity="9" version="0" timestamp="1674643971">
   <sources>
     <source>/home/runner/work/craftware-microservice-template-dotnet/craftware-microservice-template-dotnet/Craftware.ErrorHandling/</source>
   </sources>
